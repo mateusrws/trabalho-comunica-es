@@ -13,13 +13,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; color: #262626; }
-        .bg-insta-gradient { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-        .text-insta-gradient { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; }
-        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 350px; max-height: 400px; }
-        @media (min-width: 768px) { .chart-container { height: 400px; } }
-        .metric-card { transition: transform 0.2s ease-in-out; }
-        .metric-card:hover { transform: translateY(-5px); }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            color: #262626;
+        }
+        .bg-insta-gradient {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        .text-insta-gradient {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .metric-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body class="antialiased pb-20">
@@ -46,7 +74,7 @@
                 O Fenômeno Instagram sob a Ótica da Comunicação
             </h1>
             <p class="text-xl md:text-2xl font-light opacity-90 max-w-2xl mx-auto">
-                Análise técnica e sociológica do ecossistema digital contemporâneo.
+                De um simples aplicativo de filtros para um ecossistema complexo que dita o entretenimento, o comércio e a nossa identidade digital.
             </p>
         </div>
     </header>
@@ -56,7 +84,11 @@
         <section id="visao-geral" class="scroll-mt-24">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">1. Visão Geral e Escala</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    O Instagram é a principal rede social focada em compartilhamento visual do mundo. Entender o seu impacto requer analisar a escala colossal de sua base de usuários e o nível de atenção que a plataforma retém diariamente.
+                </p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 <div class="bg-white rounded-2xl shadow-md p-6 metric-card border-t-4 border-[#f09433]">
                     <div class="text-4xl mb-2">🌍</div>
@@ -79,41 +111,116 @@
                     <div class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Marcas Ativas</div>
                 </div>
             </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">A Hegemonia Jovem</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A força motriz por trás do engajamento e das tendências (trends) na plataforma é amplamente dominada pela Geração Z e pelos Millennials. Esta distribuição demográfica orienta desde o design de novas funcionalidades (como o Reels) até as estratégias de publicidade das grandes corporações.
+                    </p>
+                    <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-bold">
+                        <span>💡 O gráfico ao lado ilustra a concentração de atenção nesta faixa etária.</span>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="chart-container">
+                        <canvas id="demographicChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ecossistema" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">O Ecossistema e Fluxo de Interação</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    A comunicação no Instagram é multimodal. A plataforma divide a atenção do usuário em quatro pilares principais, criando um funil de interação que vai da descoberta inicial até a intimidade conversacional.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-8 overflow-hidden relative">
+                <div class="absolute top-0 left-0 w-full h-2 bg-insta-gradient"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                    
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-2xl border border-gray-100 relative">
+                        <div class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center text-2xl font-bold text-[#dc2743] mb-4">1</div>
+                        <h4 class="text-xl font-bold mb-2">Reels</h4>
+                        <p class="text-sm text-gray-600 mb-4">Descoberta, entretenimento e alcance de massa mediado pelo algoritmo.</p>
+                        <span class="text-xs font-bold px-3 py-1 bg-purple-100 text-purple-700 rounded-full uppercase">Atrair</span>
+                        <div class="hidden md:block absolute top-1/2 -right-4 text-gray-300 text-3xl z-10 transform -translate-y-1/2">➡️</div>
+                        <div class="md:hidden text-gray-300 text-3xl my-2">⬇️</div>
+                    </div>
+
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-2xl border border-gray-100 relative">
+                        <div class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center text-2xl font-bold text-[#dc2743] mb-4">2</div>
+                        <h4 class="text-xl font-bold mb-2">Feed</h4>
+                        <p class="text-sm text-gray-600 mb-4">Identidade visual fixa, estética curada e registro permanente (assíncrono).</p>
+                        <span class="text-xs font-bold px-3 py-1 bg-pink-100 text-pink-700 rounded-full uppercase">Apresentar</span>
+                        <div class="hidden md:block absolute top-1/2 -right-4 text-gray-300 text-3xl z-10 transform -translate-y-1/2">➡️</div>
+                        <div class="md:hidden text-gray-300 text-3xl my-2">⬇️</div>
+                    </div>
+
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-2xl border border-gray-100 relative">
+                        <div class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center text-2xl font-bold text-[#dc2743] mb-4">3</div>
+                        <h4 class="text-xl font-bold mb-2">Stories</h4>
+                        <p class="text-sm text-gray-600 mb-4">Cotidiano, espontaneidade e engajamento direto (duração de 24 horas).</p>
+                        <span class="text-xs font-bold px-3 py-1 bg-orange-100 text-orange-700 rounded-full uppercase">Conectar</span>
+                        <div class="hidden md:block absolute top-1/2 -right-4 text-gray-300 text-3xl z-10 transform -translate-y-1/2">➡️</div>
+                        <div class="md:hidden text-gray-300 text-3xl my-2">⬇️</div>
+                    </div>
+
+                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                        <div class="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center text-2xl font-bold text-[#dc2743] mb-4">4</div>
+                        <h4 class="text-xl font-bold mb-2">Direct (DM)</h4>
+                        <p class="text-sm text-gray-600 mb-4">Intimidade, diálogo privado, suporte e conversão comercial direta.</p>
+                        <span class="text-xs font-bold px-3 py-1 bg-green-100 text-green-700 rounded-full uppercase">Converter</span>
+                    </div>
+
+                </div>
+            </div>
         </section>
 
         <section id="teorias" class="scroll-mt-24">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">3. A Dinâmica sob Teorias da Comunicação</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    A estrutura do Instagram é analisada sob três pilares teóricos essenciais que definem a interação digital moderna.
+                    A plataforma não é um espelho neutro da sociedade. O comportamento do usuário e da própria ferramenta pode ser decodificado através de três lentes acadêmicas fundamentais.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:border-[#f09433] transition-colors">
-                    <div class="text-5xl mb-6">💻</div>
-                    <h3 class="text-xl font-bold mb-3">Comunicação Mediada por Computador (CMC)</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Analisa como as interações humanas são moldadas pela interface digital. No Instagram, a ausência de pistas não-verbais físicas é compensada por <em>emojis</em>, filtros e ferramentas de reação (likes, stickers), criando uma forma de "presença social" mediada unicamente por algoritmos e pixels.
+                    <div class="text-5xl mb-6">🎯</div>
+                    <h3 class="text-xl font-bold mb-3">Usos e Gratificações</h3>
+                    <h4 class="text-sm font-semibold text-gray-500 mb-4">Katz, Blumler & Gurevitch</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        O público não é passivo. Os usuários acessam a rede buscando ativamente satisfazer necessidades psicológicas e sociais específicas:
                     </p>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start"><span class="mr-2">🔹</span> Integração Social (ver amigos)</li>
+                        <li class="flex items-start"><span class="mr-2">🔹</span> Cognitiva (tutoriais, notícias)</li>
+                        <li class="flex items-start"><span class="mr-2">🔹</span> Evasão/Entretenimento (Reels)</li>
+                        <li class="flex items-start"><span class="mr-2">🔹</span> Autoexpressão (Feed curado)</li>
+                    </ul>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:border-[#dc2743] transition-colors">
-                    <div class="text-5xl mb-6">🤫</div>
-                    <h3 class="text-xl font-bold mb-3">Espiral do Silêncio</h3>
-                    <h4 class="text-sm font-semibold text-gray-500 mb-4">Elisabeth Noelle-Neumann</h4>
+                    <div class="text-5xl mb-6">🎛️</div>
+                    <h3 class="text-xl font-bold mb-3">Agenda-Setting</h3>
+                    <h4 class="text-sm font-semibold text-gray-500 mb-4">McCombs & Shaw</h4>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Usuários tendem a silenciar opiniões divergentes ao perceberem que estão na minoria. No Instagram, a contagem pública de "likes" e o alcance dos Reels agem como um medidor de "clima de opinião". O medo do isolamento social força os usuários a se adequarem ao padrão predominante, reforçando o consenso majoritário.
+                        A mídia não dita *como* pensar, mas *sobre o que* pensar. No Instagram, o papel clássico do jornalista é substituído pelo <strong>Algoritmo de Recomendação</strong>. Ele atua como o grande *gatekeeper*, decidindo quais estéticas, desafios e discussões serão priorizados na aba "Explorar", moldando o debate público diário através da visibilidade seletiva.
                     </p>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:border-[#bc1888] transition-colors">
-                    <div class="text-5xl mb-6">🌱</div>
-                    <h3 class="text-xl font-bold mb-3">Teoria do Cultivo</h3>
-                    <h4 class="text-sm font-semibold text-gray-500 mb-4">George Gerbner</h4>
+                    <div class="text-5xl mb-6">🎭</div>
+                    <h3 class="text-xl font-bold mb-3">Simulacro e Hiper-realidade</h3>
+                    <h4 class="text-sm font-semibold text-gray-500 mb-4">Jean Baudrillard</h4>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        A exposição prolongada e contínua ao conteúdo do Instagram "cultiva" na mente do usuário uma percepção distorcida da realidade. Ao consumir incessantes imagens de sucesso, viagens e corpos perfeitos, os usuários passam a acreditar que esses padrões são a norma social, normalizando ideais inalcançáveis e alterando suas visões de mundo.
+                        A perda de referência com o real. Perfis são cuidadosamente curados e editados. Essa "vida idealizada" exibida na tela funciona como um simulacro. O público frequentemente passa a desejar a representação daquela vida em vez da vida real, gerando uma busca incessante por estéticas perfeitas e inatingíveis.
                     </p>
                 </div>
 
@@ -122,36 +229,161 @@
 
         <section id="impactos" class="scroll-mt-24">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">4. Impactos Sociais</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">4. Impactos Sociais (O Lado A e o Lado B)</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    A arquitetura focada no engajamento a qualquer custo gera efeitos profundos na sociedade, apresentando uma dualidade clara entre oportunidades de conexão e riscos psicossociais.
+                </p>
             </div>
+
             <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
                 <div>
-                    <h3 class="text-2xl font-bold mb-6">Análise Radial dos Efeitos</h3>
+                    <h3 class="text-2xl font-bold mb-6">A Dualidade do Engajamento</h3>
                     <p class="text-gray-600 mb-8 leading-relaxed">
-                        O gráfico ao lado contrasta a democratização do acesso contra os riscos estruturais da plataforma.
+                        O gráfico radial ilustra como o Instagram afeta diferentes dimensões da sociedade. Eixos que se expandem pela área externa indicam forte presença daquele impacto. Observa-se um contraste notório: enquanto a plataforma maximiza o potencial criativo e comercial, ela atinge níveis críticos em indicadores de pressão psicológica e fragmentação social.
                     </p>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-emerald-500 pl-4">
+                            <h4 class="font-bold text-gray-900 flex items-center"><span class="text-emerald-500 mr-2">➕</span> Impactos Positivos</h4>
+                            <p class="text-sm text-gray-600 mt-1">Democratização da criação de conteúdo, forte estímulo ao e-commerce (Social Commerce) e criação de nichos e comunidades de apoio.</p>
+                        </div>
+                        <div class="border-l-4 border-rose-500 pl-4">
+                            <h4 class="font-bold text-gray-900 flex items-center"><span class="text-rose-500 mr-2">➖</span> Impactos Negativos</h4>
+                            <p class="text-sm text-gray-600 mt-1">Aumento de ansiedade por comparação, polarização através de câmaras de eco algorítmicas e forte capitalização (e exaustão) da atenção humana (FOMO).</p>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="w-full">
                     <div class="chart-container">
                         <canvas id="impactsRadarChart"></canvas>
                     </div>
                 </div>
+
             </div>
         </section>
+
+        <section class="bg-gray-900 rounded-3xl p-8 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 bg-insta-gradient"></div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Conclusão</h2>
+                <p class="text-lg md:text-xl font-light leading-relaxed max-w-4xl mx-auto mb-8">
+                    O Instagram deixou de ser uma simples vitrine de imagens para se consolidar como um <strong>mediador da nossa percepção de realidade</strong>. Compreender suas dinâmicas sob a ótica da comunicação nos permite usar a plataforma não apenas como consumidores passivos, mas como sujeitos conscientes das forças comerciais e psicossociais que moldam nossa experiência digital.
+                </p>
+                <div class="inline-block px-6 py-3 border border-white/30 rounded-full text-sm tracking-widest uppercase font-bold text-white/80">
+                    Fim do Relatório
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <footer class="mt-20 py-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+        <p>Infográfico gerado com base no Relatório Analítico de Comunicação.</p>
+    </footer>
+
     <script>
+        function wrapLabelText(labels, maxChars = 16) {
+            return labels.map(label => {
+                if (label.length <= maxChars) return label;
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxChars) {
+                        if (currentLine) lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                });
+                if (currentLine) lines.push(currentLine.trim());
+                return lines;
+            });
+        }
+
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        const ctxDemographic = document.getElementById('demographicChart').getContext('2d');
+        const rawDemoLabels = ['Geração Z (18-24 anos)', 'Millennials (25-34 anos)', 'Outras Faixas Etárias'];
+        const wrappedDemoLabels = wrapLabelText(rawDemoLabels);
+
+        new Chart(ctxDemographic, {
+            type: 'doughnut',
+            data: {
+                labels: wrappedDemoLabels,
+                datasets: [{
+                    data: [31, 30, 39],
+                    backgroundColor: [
+                        '#833AB4', 
+                        '#E1306C', 
+                        '#F56040'  
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { family: "'Inter', sans-serif" },
+                            padding: 20
+                        }
+                    },
+                    tooltip: tooltipConfig
+                }
+            }
+        });
+
         const ctxRadar = document.getElementById('impactsRadarChart').getContext('2d');
+        const rawRadarLabels = [
+            'Democratização e Voz Ativa', 
+            'Pressão Estética e Mental', 
+            'Estímulo ao Comércio', 
+            'Polarização em Bolhas', 
+            'Criação de Comunidades', 
+            'Capitalização da Atenção'
+        ];
+        const wrappedRadarLabels = wrapLabelText(rawRadarLabels);
+
         new Chart(ctxRadar, {
             type: 'radar',
             data: {
-                labels: ['Democratização', 'Pressão Estética', 'Comércio', 'Espiral/Silêncio', 'Comunidades', 'Cultivo Social'],
+                labels: wrappedRadarLabels,
                 datasets: [
                     {
-                        label: 'Potencial',
-                        data: [80, 90, 75, 85, 60, 95],
-                        backgroundColor: 'rgba(220, 39, 65, 0.2)',
-                        borderColor: '#dc2743',
+                        label: 'Potencial Positivo',
+                        data: [90, 15, 85, 20, 80, 10],
+                        backgroundColor: 'rgba(16, 185, 129, 0.2)', 
+                        borderColor: '#10b981',
+                        pointBackgroundColor: '#10b981',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Risco Negativo',
+                        data: [15, 85, 10, 80, 20, 95],
+                        backgroundColor: 'rgba(244, 63, 94, 0.2)', 
+                        borderColor: '#f43f5e',
+                        pointBackgroundColor: '#f43f5e',
                         borderWidth: 2
                     }
                 ]
@@ -159,7 +391,24 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                scales: { r: { ticks: { display: false } } }
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                        pointLabels: {
+                            font: { family: "'Inter', sans-serif", size: 11 },
+                            color: '#4b5563'
+                        },
+                        ticks: { display: false, min: 0, max: 100 }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { font: { family: "'Inter', sans-serif" } }
+                    },
+                    tooltip: tooltipConfig
+                }
             }
         });
     </script>
